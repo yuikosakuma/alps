@@ -9,11 +9,10 @@ from psycopg2 import sql
 
 def main():
   with pg.connect(
-  host="10.24.11.107",
-  port="12345", 
-  dbname="postgres",
-#  user="docker",
-  user="postgres",
+  host=" ",
+  port=" ", 
+  dbname=" ",
+  user=" ",
   password="password"
   ) as conn:
         with conn.cursor() as cursor:

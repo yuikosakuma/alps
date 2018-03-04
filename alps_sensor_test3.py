@@ -19,14 +19,12 @@ class NtfyDelegate(btle.DefaultDelegate):
             GeoMagnetic_X = s16(int((cal[6:8] + cal[4:6]), 16)) * 0.15
             GeoMagnetic_Y = s16(int((cal[10:12] + cal[8:10]), 16)) * 0.15
             GeoMagnetic_Z = s16(int((cal[14:16] + cal[12:14]), 16)) * 0.15
-            #print 'Geo-Magnetic X:{0:.3f} Y:{1:.3f} Z:{2:.3f}'.format(GeoMagnetic_X, GeoMagnetic_Y, GeoMagnetic_Z)
             print 'GeoMagnetic_X:{0:.3f}'.format(GeoMagnetic_X)
             print 'GeoMagnetic_Y:{0:.3f}'.format(GeoMagnetic_Y)
             print 'GeoMagnetic_Z:{0:.3f}'.format(GeoMagnetic_Z)
             Acceleration_X = 1.0 * s16(int((cal[18:20] + cal[16:18]), 16)) / 1024
             Acceleration_Y = 1.0 * s16(int((cal[22:24] + cal[20:22]), 16)) / 1024
             Acceleration_Z = 1.0 * s16(int((cal[26:28] + cal[24:26]), 16)) / 1024
-            #print 'Acceleration X:{0:.3f} Y:{1:.3f} Z:{2:.3f}'.format(Acceleration_X, Acceleration_Y, Acceleration_Z)
             print 'Acceleration_X:{0:.3f}'.format(Acceleration_X)
             print 'Acceleration_Y:{0:.3f}'.format(Acceleration_Y)
             print 'Acceleration_Z:{0:.3f}'.format(Acceleration_Z)
@@ -37,11 +35,9 @@ class NtfyDelegate(btle.DefaultDelegate):
             Temperature = 1.0*((int((cal[14:16] + cal[12:14]), 16) -2096)/50)
             UV = int((cal[18:20] + cal[16:18]), 16) / (100*0.388)
             AmbientLight = int((cal[22:24] + cal[20:22]), 16) / (0.05*0.928)
-            #print 'Pressure:{0:.3f} Humidity:{1:.3f} Temperature:{2:.3f} '.format(Pressure, Humidity , Temperature)
             print 'Pressure:{0:.3f}'.format(Pressure)
             print 'Humidity:{0:.3f}'.format(Humidity)
             print 'Temperature:{0:.3f}'.format(Temperature)
-            #print 'UV:{0:.3f} AmbientLight:{1:.3f} '.format(UV, AmbientLight)
             print 'UV:{0:.3f}'.format(UV)
             print 'AmbientLight:{0:.3f}'.format(AmbientLight)
        
@@ -52,8 +48,7 @@ class AlpsSensor(Peripheral):
         self.result = 1
 
 def main():
-    #alps = AlpsSensor("28:A1:83:E1:59:48")
-    alps = AlpsSensor("48:F0:7B:78:47:39")
+    alps = AlpsSensor(" ")
     alps.setDelegate( NtfyDelegate(btle.DefaultDelegate) )
     alps.writeCharacteristic(0x0013, struct.pack('<bb', 0x01, 0x00), True)# Custom1 Notify Enable     
     alps.writeCharacteristic(0x0016, struct.pack('<bb', 0x01, 0x00), True)# Custom2 Notify Enable

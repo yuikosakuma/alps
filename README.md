@@ -1,9 +1,12 @@
 # ALPS
-collecting ALPS sensor data,   
-sending to PostgreSQL database
+System to collect ALPS sensor data for time series analysis tutorial
+- Overview
+  - Collecting ALPS sensor data  
+  - Sending to PostgreSQL databas
+  - Analyzing sensor data by python
 ## Collecting ALPS sensor data
-- Blog: https://tomosoft.jp/design/?p=8104
-- Used python interface "bluepy"
+- Used sample code in the following blog to collect sensor data
+  - Blog: https://tomosoft.jp/design/?p=8104
 - Outputting sensor values to console
 - Sampling rate
   - Motion sensor : 1sec
@@ -11,3 +14,10 @@ sending to PostgreSQL database
 ## Sending to database
 - PostgreSQL database on Docker container 
 - Used python subprocess to read console output
+## Analysis
+- Tutorial for time series analysis
+  - Fetching data from PostgreSQL database
+  - Tutorial for typical techniques for time series analysis
+  - Visualization of sensor data
+- Link for jupyter notebook
+  - https://nbviewer.ipython.org/gist/yuikosakuma/cadd2c8f083742d6197da7d2fd4666b8 

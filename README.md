@@ -9,13 +9,14 @@ Simple IoT system to collect ALPS sensor data for time series analysis tutorial
 - https://www.alps.com/j/iotsmart/
 - Acquires sensor data
   - motion
-   - acceleration / magnetic
+    - acceleration / magnetic
   - environment
     - pressure / temperature / humidity / UV / luminosity
 - Communication using BlueTooth
 ### Collecting ALPS sensor data
 - Used sample code in the following blog to collect sensor data
   - Blog: https://tomosoft.jp/design/?p=8104
+  - correction for some data values
 - Outputting sensor values to console
 - Sampling rate
   - Motion sensor : 1sec
@@ -30,3 +31,6 @@ Simple IoT system to collect ALPS sensor data for time series analysis tutorial
   - Visualization of sensor data
 - Link for jupyter notebook
   - https://nbviewer.ipython.org/gist/yuikosakuma/cadd2c8f083742d6197da7d2fd4666b8 
+###Experiment
+- Collected data in the laboratory in Fabruary, 2018
+- Used this data and tutorial for education for B4 

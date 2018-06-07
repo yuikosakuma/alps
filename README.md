@@ -1,10 +1,19 @@
-# ALPS
-System to collect ALPS sensor data for time series analysis tutorial
+# IoT data analysis system using ALPS sensor
+Simple IoT system to collect ALPS sensor data for time series analysis tutorial
 - Overview
   - Collecting ALPS sensor data  
   - Sending to PostgreSQL databas
   - Analyzing sensor data by python
-## Collecting ALPS sensor data
+## ALPS sensor
+![alps_sensor](https://github.com/yuikosakuma/alps/photo/alps_sensor.jpg)
+- https://www.alps.com/j/iotsmart/
+- Acquires sensor data
+  - motion
+   - acceleration / magnetic
+  - environment
+    - pressure / temperature / humidity / UV / luminosity
+- Communication using BlueTooth
+### Collecting ALPS sensor data
 - Used sample code in the following blog to collect sensor data
   - Blog: https://tomosoft.jp/design/?p=8104
 - Outputting sensor values to console

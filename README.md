@@ -30,7 +30,7 @@ Simple IoT system to collect ALPS sensor data for time series analysis tutorial
   - Tutorial for typical techniques for time series analysis
   - Visualization of sensor data
 - Link for jupyter notebook
-  - https://nbviewer.ipython.org/gist/yuikosakuma/cadd2c8f083742d6197da7d2fd4666b8 
-###Experiment
+  - https://nbviewer.ipython.org/gist/yuikosakuma/cadd2c8f083742d6197da7d2fd4666b8    
+##Experiment
 - Collected data in the laboratory in Fabruary, 2018
 - Used this data and tutorial for education for B4 
